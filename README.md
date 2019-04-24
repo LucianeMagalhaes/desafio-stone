@@ -9,7 +9,7 @@ Banco de dados relacional [MySql] (https://github.com/mysql) versao 8.0.15
 
 Para instalá-lo em sua máquina faça os comandos a seguir:
 ```shell
-git clone git@github.com/LucianeMagalhaes/desafio-stone
+git clone https://github.com/LucianeMagalhaes/desafio-stone
 ```
 
 ## MySql
@@ -25,14 +25,14 @@ Para instalá-lo em sua máquina faça os comandos a seguir:
 ```shell
 cd client
 npm install -g @angular/cli
-npm install ci
+npm ci
 ```
 
 ## Node
 Para instalá-lo em sua máquina faça os comandos a seguir:
 ```shell
 cd server
-npm install ci
+npm ci
 ```
 
 Para executar a aplicação em modo de desenvolvimento execute os comandos:
