@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="search-func col-md-12">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Pesquise por nome ou idade ou cargo ">
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>          
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Cargo</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let funcionario of funcionarios | filter:searchText">        
+        <td>{{ funcionario.nome }}</td>
+        <td>{{ funcionario.idade }}</td>
+        <td>{{ funcionario.cargo }}</td>
+        <td>
+          <span class="float-right">
+            <button type="button" class="btn btn-dark btn-sm" disabled><i class="fa fa-pencil"></i></button>
+            {{' '}}
+            <button  type="button" class="btn btn-dark btn-sm" disabled><i class="fa fa-trash"></i></button>
+          </span>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

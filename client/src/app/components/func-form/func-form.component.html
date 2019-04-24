@@ -1,0 +1,35 @@
+<form class="needs-validation" novalidate [formGroup]="form">
+    <div class="form-row">
+        <div class="col-sm-12">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="Nome" formControlName="nome" 
+                   [ngClass]=" { 'is-invalid': submitted && form.get('nome').errors }" />
+            <div class="invalid-feedback" *ngIf="form.get('nome').errors && form.get('nome').errors['required']">
+                Informe o nome
+            </div>
+        </div>
+        
+        <div class="col-sm-12" style="padding-top: 20px">
+            <label for="idade">Idade</label>
+            <input type="number" min="1" class="form-control" id="idade" placeholder="Idade" formControlName="idade"
+                   [ngClass]=" { 'is-invalid': submitted && form.get('idade').errors }"/>
+            <div class="invalid-feedback" *ngIf="form.get('idade').errors && form.get('idade').errors['required']">
+                Informe a idade
+            </div>
+        </div>
+         
+        <div class="col-sm-12" style="padding-top: 20px">
+            <label for="curso">Cargo</label>
+            <input type="text" class="form-control" id="cargo" placeholder="Cargo" formControlName="cargo" 
+                   [ngClass]=" { 'is-invalid': submitted && form.get('cargo').errors }" />
+            <div class="invalid-feedback" *ngIf="form.get('cargo').errors && form.get('cargo').errors['required']">
+              Informe o cargo
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 10px">
+        <button type="submit" class="btn btn-dark" (click)="onSubmit()">Salvar</button>
+        <button type="button" class="btn btn-light" (click)="onCancel()">Cancelar</button>
+    </div>
+
+</form>
